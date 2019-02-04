@@ -1,0 +1,13 @@
+{%extends 'global.html'%}
+{%block content%}
+<h1>TUTORIALS</h1>
+<div class="tutorials">
+    {%for tutorial in tutorials%}
+    <div class="tutorial">
+        <h1><a href="{% url 'tutorials:detail' slug=tutorial.slug %}">{{tutorial.title}}</a> </h1>
+        <p>{{tutorial.snippet}}</p>
+        <p>{{tutorial.date}}</p>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}
