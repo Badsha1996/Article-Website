@@ -8,12 +8,12 @@ from django.conf import settings
 
 
 
-
-
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/',include('accounts.urls')),
     path('tutorials/',include('tutorials.urls')),
-    path('about/',views.about),
+    path('about/',views.about,name='about'),
+    path('contact/',views.contact,name='contact'),
     path('',views.homepage,name="index"),
 ]
 

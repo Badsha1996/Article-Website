@@ -4,7 +4,7 @@
 <div class="tutorials">
     {%for tutorial in tutorials%}
     <div class="tutorial">
-        <h1><a href="{% url 'tutorials:detail' slug=tutorial.slug %}">{{tutorial.title}}</a> </h1>
+        <h2><a href="{% url 'tutorials:detail' slug=tutorial.slug %}">{{tutorial.title}}</a> </h2>
         <p>{{tutorial.snippet}}</p>
         <p>{{tutorial.date}}</p>
     </div>

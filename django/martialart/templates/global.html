@@ -10,6 +10,25 @@
 <body>
 <div class="wrapper">
     <h2><a href="{% url 'index'%}"><img src="{% static 'logo.png' %}"/></a></h2>
+    <nav>
+        <ul>
+            {%if user.is_authenticated%}
+                <li>
+                    <form class="logout-link" action="{% url 'accounts:logout'%}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit">Logout</button>
+
+                    </form>
+                </li>
+            <li><a href="{% url 'tutorials:list'%}">Tutorials List<a/></li>
+            <li><a href="{% url 'about' %}">About</a>
+             <li><a href="{% url 'contact'%}">Contact</a> </li>
+            {%else%}
+            <li><a href="{% url 'accounts:login' %}">Login</a>
+             <li><a href="{% url 'accounts:signup'%}">Signup</a> </li>
+            {%endif%}
+        </ul>
+    </nav>
     {%block content%}
     {%endblock%}
 </div>
