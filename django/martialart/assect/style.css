@@ -34,7 +34,11 @@ div.wrapper h1{
     margin: 100px auto;
     font-size: 2.4em;
 }
-
+div.wrapper p{
+    text-align:center;
+    margin:20px auto;
+    font-size: 1em
+}
 header{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -105,6 +109,23 @@ nav button{
     padding:3px;
 }
 
+.errorlist li{
+    padding:10px;
+    list-style-type:none;
+    border: 1px solid red;
+    color:red;
+    margin: 10px 0;
+}
+.errorlist{
+    padding: 0px;
+}
+.site-form input[type='submit']{
+    background:#00bda0;
+    color: #fff;
+    border:0;
+    font-size:1.1em;
+    border-radius:4px;
+}
 .errorlist li{
     padding:10px;
     list-style-type:none;

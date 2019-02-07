@@ -4,12 +4,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>tutorial</title>
+    <title>Martialart360</title>
     <link rel="stylesheet" href="{%static 'style.css'%}">
 </head>
 <body>
 <div class="wrapper">
+     {%if user.is_authenticated%}
+    <h2><a href="{% url 'home'%}"><img src="{% static 'logo.png' %}"/></a></h2>
+     {%else%}
     <h2><a href="{% url 'index'%}"><img src="{% static 'logo.png' %}"/></a></h2>
+     {%endif%}
+
     <nav>
         <ul>
             {%if user.is_authenticated%}
