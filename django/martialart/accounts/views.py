@@ -11,7 +11,7 @@ def signup_for(request):
             user=form.save()
             #log the user in
             login(request,user)
-            return redirect('tutorials:list')
+            return redirect('index')
     else:
         form=UserCreationForm()
     return render(request,"accounts/signup.html",{'form':form})
@@ -24,7 +24,7 @@ def login_view(request):
             user= form.get_user()
             #login the user
             login(request,user)
-            return  redirect('tutorials:list')
+            return  redirect('index')
 
     else:
         form = AuthenticationForm()
@@ -34,7 +34,7 @@ def login_view(request):
 def logout_view(request):
     if request.method=='POST':
         logout(request)
-    return redirect('tutorials:list')
+    return redirect('index')
 
 
 

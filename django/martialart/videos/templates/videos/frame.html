@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>tutorial</title>
     <link rel="stylesheet" href="{%static 'style.css'%}">
 </head>
@@ -30,8 +29,19 @@
             {%endif%}
         </ul>
     </nav>
-    {%block content%}
-    {%endblock%}
+</div>
+<div class="videos">
+    <div class="video">
+        <video id="intro" type="video/mp4" controls preload autoplay>
+            <source src="{{ video.upload.url }}" type="video/mp4"></source>
+        </video>
+        <h2>{{video.title}}</h2>
+        <p>{{video.description}}</p>
+        <p>{{video.date}}</p>
+
+    </div>
 </div>
 </body>
 </html>
+
+

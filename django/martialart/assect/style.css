@@ -14,6 +14,10 @@ body *{
 h1, h2, h3, h4, h5{
     font-weight: normal;
     margin: 0;
+    text-align:center
+}
+p{
+    text-align:justify
 }
 
 a, a:hover, a:visited{
@@ -33,6 +37,88 @@ div.wrapper h1{
 
 header{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    padding: 5px 0;
+}
+nav{
+    justify-self:end;
+}
+nav li{
+    display:inline-block;
+    margin-left:100px;
+}
 
+nav button{
+    background: none;
+    color: #fff;
+    curser: pointer;
+    border: 0;
+    font-size: 1em;
+}
+.tutorials{
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.tutorial{
+    padding:10px;
+    border: 1px solid;
+    position:relative;
+    padding-bottom:40px;
+}
+.tutorial-frame .tutorial{
+    padding:0px;
+}
+.tutorial-frame .tutorial img{
+    max-width:100%;
+}
+.tutorial-frame .tutorial h2{
+    text-align:center;
+    margin: 20px auto;
+    font-size: 2em;
+    font-family: sans-serif;
+    text-decoration:underline;
+}
+
+.tutorial-frame .tutorial p{
+    text-align:center;
+
+}
+.tutorial a{
+    padding:3px;
+    background:#00dba0;
+    border:solid #fff;
+    color: gold;
+
+}
+
+.site-form{
+    margin-top:60px;
+    border:1px solid #fff;
+    padding: 20px;
+
+}
+
+.site-form input, .site-form textarea{
+    display:block;
+    margin: 10px 0 0 ;
+    padding:3px;
+}
+
+.errorlist li{
+    padding:10px;
+    list-style-type:none;
+    border: 1px solid red;
+    color:red;
+    margin: 10px 0;
+}
+.errorlist{
+    padding: 0px;
+}
+.site-form input[type='submit']{
+    background:#00bda0;
+    color: #fff;
+    border:0;
+    font-size:1.1em;
+    border-radius:4px;
 }

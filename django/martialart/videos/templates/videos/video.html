@@ -1,0 +1,13 @@
+{%extends 'global.html'%}
+{%block content%}
+<h1>TUTORIAL VIDEOS</h1>
+<div class="videos">
+    {%for video in videos%}
+    <div class="video">
+        <h2><a href="{% url 'videos:detail' slug=video.slug %}">{{video.title}}</a> </h2>
+        <p>{{video.snippet}}</p>
+        <p>{{video.date}}</p>
+    </div>
+    {%endfor%}
+</div>
+{%endblock%}
