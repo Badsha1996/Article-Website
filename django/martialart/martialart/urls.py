@@ -10,6 +10,7 @@ from accounts import views as account_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('accounts/',include('accounts.urls')),
     path('tutorials/',include('tutorials.urls')),
     path('videos/',include('videos.urls')),

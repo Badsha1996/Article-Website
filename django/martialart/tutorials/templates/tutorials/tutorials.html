@@ -4,9 +4,9 @@
 <div class="tutorials">
     {%for tutorial in tutorials%}
     <div class="tutorial">
-        <h2><a href="{% url 'tutorials:detail' slug=tutorial.slug %}">{{tutorial.title}}</a> </h2>
-        <p>{{tutorial.snippet}}</p>
-        <p>{{tutorial.date}}</p>
+        <h2><a href="{% url 'tutorials:detail' slug=tutorial.slug %}">{{tutorial.title|safe}}</a> </h2>
+        <p>{{tutorial.snippet|safe}}</p>
+        <p>{{tutorial.date|safe}}</p>
     </div>
     {%endfor%}
 </div>

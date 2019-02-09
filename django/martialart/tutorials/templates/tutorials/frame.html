@@ -3,10 +3,10 @@
 
 <div class="tutorial-frame">
     <div class="tutorial">
-        <img src="{{tutorial.thumb.url}}"/>
-        <h2>{{tutorial.title}}</h2>
-        <p>{{tutorial.body}}</p>
-        <p>{{tutorial.date}}</p>
+        <img src="{{tutorial.thumb.url|safe}}"/>
+        <h2>{{tutorial.title|safe}}</h2>
+        <p>{{tutorial.body|safe}}</p>
+        <p>{{tutorial.date|safe}}</p>
 
     </div>
 

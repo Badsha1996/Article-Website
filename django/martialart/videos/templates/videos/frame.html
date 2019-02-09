@@ -32,12 +32,12 @@
 </div>
 <div class="videos">
     <div class="video">
-        <video id="intro" type="video/mp4" controls preload autoplay>
-            <source src="{{ video.upload.url }}" type="video/mp4"></source>
+        <video id="intro" height="600" width="800" type="video/mp4" controls preload autoplay>
+            <source src={{videos.upload.url}} type="video/mp4"></source>
         </video>
-        <h2>{{video.title}}</h2>
-        <p>{{video.description}}</p>
-        <p>{{video.date}}</p>
+        <h2>{{videos.title}}</h2>
+        <p>{{videos.description}}</p>
+        <p>{{videos.date}}</p>
 
     </div>
 </div>

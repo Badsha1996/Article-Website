@@ -40,8 +40,12 @@ INSTALLED_APPS = [
     'tutorials',
     'accounts',
     'videos',
+    'ckeditor',
+
 
 ]
+CKEDITOR_UPLOAD_PATH='uploads/'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -126,6 +130,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR,'assect'),
 )
+
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT =os.path.join(BASE_DIR,'media')

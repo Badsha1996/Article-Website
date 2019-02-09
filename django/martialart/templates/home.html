@@ -1,8 +1,13 @@
 {% extends 'global.html' %}
-{%load static from staticfiles%}
+{%load static%}
 {% block content %}
 <h1>welcome to the Homepage</h1>
 <div class="wrapper">
     <h2><a href="#"><img src="{% static 'home.png' %}"/></a></h2>
+    <h2>"what is martial art?"</h2>
+    <p>Martial arts are codified systems and traditions of combat practiced for a number of reasons such as self-defense, military and law enforcement applications, physical, mental and spiritual development; as well as entertainment and the preservation of a nation's intangible cultural heritage.</p>
+    <h2><a href="#"><img src="{% static 'jack.gif' %}"/></a></h2>
+    <h2>"KEEP IMPROVING,KEEP PRACTICING"</h2>
+    <h2><a href="#"><img src="{% static 'wing.gif' %}"/></a></h2>
 </div>
 {% endblock %}

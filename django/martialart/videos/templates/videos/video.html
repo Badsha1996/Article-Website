@@ -5,7 +5,6 @@
     {%for video in videos%}
     <div class="video">
         <h2><a href="{% url 'videos:detail' slug=video.slug %}">{{video.title}}</a> </h2>
-        <p>{{video.snippet}}</p>
         <p>{{video.date}}</p>
     </div>
     {%endfor%}
